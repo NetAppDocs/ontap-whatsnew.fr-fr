@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: ontap98fo_netapp_ontap.html 
+keywords: TR-4872, 4872, introduction, NAS, SAN, NFS, SMB, S3, HA 
+summary: 'Cette page présente les toutes dernières fonctionnalités d"ONTAP 9.8 et des liens vers des informations complémentaires.' 
+---
+= Tr-4872 : présentation des fonctionnalités de NetApp ONTAP 9.8
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Justin Parisi, NetApp
+
+NetApp ONTAP est le logiciel phare de gestion des données de NetApp. Il vous permet de gérer et de protéger vos données de manière transparente, où qu'elles résident, sur site, à la périphérie ou dans le cloud.
+
+NetApp ONTAP prend en charge les fonctionnalités suivantes, sur la même plateforme :
+
+* Protocoles NAS (NFS et SMB)
+* Protocoles SAN (iSCSI, FCP et NVMe)
+* Accès aux données S3
+* Protection des données (technologies de copie NetApp Snapshot, NetApp SnapMirror et SnapVault)
+* Fonctionnalités d'efficacité du stockage (déduplication, compaction et compression)
+* Basculements haute disponibilité (comprenant les basculements rapides pour le SAN de niveau 1 avec la baie 100 % SAN)
+* Prise en charge des configurations 100 % Flash, des disques rotatifs et des disques hybrides
+* Fonctionnalités de sécurité (authentification multifacteur, NetApp Volume Encryption et Secure Purge)
+
+
+Cette liste n'est pas exhaustive ; si nous avons inclus toutes les fonctionnalités offertes par ONTAP, ce document serait de plusieurs centaines de pages.
+
+Pour plus d'informations sur NetApp ONTAP, consultez le https://www.netapp.com/pdf.html?item=/media/7413-ds-3231.pdf["Fiche technique du logiciel de gestion de données ONTAP 9"^] et le https://docs.netapp.com/ontap-9/index.jsp["documentation produit"^].
+
+Découvrez-les maintenant link:https://tv.netapp.com/detail/video/6211778986001["vidéo"] De NetApp Insight 2020 pour une visite plus large des avancées remarquables de NetApp ONTAP.
+
+link:ontap98fo_simplicity_enhancements.html["Next : des améliorations en termes de simplicité"]

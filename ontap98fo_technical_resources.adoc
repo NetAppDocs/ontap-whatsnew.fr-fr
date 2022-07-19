@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: ontap98fo_technical_resources.html 
+keywords:  
+summary: Cette page contient des liens vers différentes ressources techniques relatives à ONTAP 9.8. 
+---
+= Ressources techniques
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Cette section couvre les ressources techniques disponibles qui décrivent en détail les fonctions mentionnées dans ce document.
+
+
+
+== Rapports techniques
+
+* Tr-4067 : Guide des meilleures pratiques et de l'implémentation de NetApp ONTAP pour NFS
++
+https://www.netapp.com/us/media/tr-4067.pdf["https://www.netapp.com/us/media/tr-4067.pdf"^]
+
+* Tr-4375 : FC MetroCluster pour ONTAP 9.7
++
+https://www.netapp.com/us/media/tr-4375.pdf["https://www.netapp.com/us/media/tr-4375.pdf"^]
+
+* Tr-4569 : guide de renforcement de la sécurité de la solution ONTAP 9
++
+https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf"^]
+
+* Tr-4571 : bonnes pratiques pour NetApp FlexGroup volumes
++
+https://www.netapp.com/us/media/tr-4571.pdf["https://www.netapp.com/us/media/tr-4571.pdf"^]
+
+* Tr-4597 : VMware vSphere avec ONTAP
++
+https://www.netapp.com/us/media/tr-4597.pdf["https://www.netapp.com/us/media/tr-4597.pdf"^]
+
+* Tr-4598 : meilleures pratiques de FabricPool
++
+https://www.netapp.com/us/media/tr-4598.pdf["https://www.netapp.com/us/media/tr-4598.pdf"^]
+
+* Tr-4678 : protection et sauvegarde des données - FlexGroup volumes
++
+https://www.netapp.com/us/media/tr-4678.pdf["https://www.netapp.com/us/media/tr-4678.pdf"^]
+
+* Tr-4689 : architecture et conception de la solution IP de MetroCluster
++
+https://www.netapp.com/us/media/tr-4689.pdf["https://www.netapp.com/us/media/tr-4689.pdf"^]
+
+* Tr-4705 : architecture et conception de la solution NetApp MetroCluster
++
+https://www.netapp.com/pdf.html?item=/media/13480-tr4705pdf.pdf["https://www.netapp.com/pdf.html?item=/media/13480-tr4705pdf.pdf"^]
+
+* Tr-4743 : FlexCache dans ONTAP
++
+https://www.netapp.com/pdf.html?item=/media/7336-tr4743pdf.pdf["https://www.netapp.com/pdf.html?item=/media/7336-tr4743pdf.pdf"^]
+
+
+
+
+
+== Podcasts
+
+* Podcast Tech OnTap épisode 263 : virtualisation dans le ONTAP – automne 2020
++
+https://soundcloud.com/techontap_podcast/episode-263-virtualization-in-ontap-fall-2020-update["https://soundcloud.com/techontap_podcast/episode-263-virtualization-in-ontap-fall-2020-update"^]
+
+* Podcast Tech OnTap épisode 264 : SnapDiff NetApp ONTAP
++
+https://soundcloud.com/techontap_podcast/episode-264-netapp-ontap-snapdiff["https://soundcloud.com/techontap_podcast/episode-264-netapp-ontap-snapdiff"^]
+
+* Épisode 265 du podcast Tech OnTap : le cloud NetApp SnapMirror avec Propion
++
+https://soundcloud.com/techontap_podcast/episode-265-netapp-snapmirror-cloud-featuring-prolion["https://soundcloud.com/techontap_podcast/episode-265-netapp-snapmirror-cloud-featuring-prolion"^]
+
+* Épisode 266 du podcast Tech OnTap : NetApp ONTAP System Manager 9.8
++
+https://soundcloud.com/techontap_podcast/episode-266-netapp-system-manager-98["https://soundcloud.com/techontap_podcast/episode-266-netapp-system-manager-98"^]
+
+* Épisode 267 du podcast Tech OnTap : continuité de l'activité SnapMirror
++
+https://soundcloud.com/techontap_podcast/episode-267-snapmirror-business-continuity-sm-bc-for-ontap-98["https://soundcloud.com/techontap_podcast/episode-267-snapmirror-business-continuity-sm-bc-for-ontap-98"^]
+
+

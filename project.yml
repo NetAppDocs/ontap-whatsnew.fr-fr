@@ -1,0 +1,41 @@
+---
+settings:
+  name: ONTAP What's New
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: fr-fr,us-en,ja-jp,zh-cn,zh-tw,ko-kr,de-de
+sidebar:
+  entries:
+  - title: Présentation des fonctionnalités de NetApp ONTAP 9.9.1
+    url: "/index.html"
+    type: solution
+    entries:
+    - title: Améliorations apportées à System Manager
+      url: "/ontap991fo_system_manager_enhancements.html"
+    - title: Améliorations SAN
+      url: "/ontap991fo_san_enhancements.html"
+    - title: Amélioration de la protection des données
+      url: "/ontap991fo_data_protection_enhancements.html"
+    - title: Autres ajouts importants
+      url: "/ontap991fo_other_major_additions.html"
+    - title: Ressources techniques
+      url: "/ontap991fo_technical_resources.html"
+  - title: Présentation des fonctionnalités de NetApp ONTAP 9.8
+    url: "/ontap98fo_netapp_ontap.html"
+    type: solution
+    entries:
+    - title: Amélioration de la simplicité
+      url: "/ontap98fo_simplicity_enhancements.html"
+    - title: Protocoles de données
+      url: "/ontap98fo_data_protocols.html"
+    - title: Fonctionnalités d'efficacité du stockage
+      url: "/ontap98fo_storage_efficiencies.html"
+    - title: La protection des données
+      url: "/ontap98fo_data_protection.html"
+    - title: Virtualisation VMware
+      url: "/ontap98fo_vmware_virtualization.html"
+    - title: Ressources techniques
+      url: "/ontap98fo_technical_resources.html"

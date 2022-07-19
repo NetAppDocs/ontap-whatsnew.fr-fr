@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: ontap98fo_storage_efficiencies.html 
+keywords: FabricPool, Compression, FlexClone, Snapshot, compaction, deduplication, 
+summary: 'Cette page présente l"efficacité du stockage ONTAP 9.8, notamment la compression et celles associées à la technologie NetApp FabricPool.' 
+---
+= Fonctionnalités d'efficacité du stockage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+L'efficacité du stockage comprend toutes les fonctionnalités qui réduisent la capacité physique nécessaire aux données d'un système de stockage. Dans ONTAP, ces opérations incluent les éléments suivants :
+
+* Compression des données
+* Compaction
+* Déduplication des données
+* NetApp FabricPool
+
+
+Parfois, ces définitions peuvent être étirées pour inclure :
+
+* Technologie NetApp FlexClone
+* Copies NetApp Snapshot
+
+
+Pour réduire la quantité de matériel physique à acheter, il est vital de pouvoir compter sur l'efficacité du stockage pour maintenir les coûts de stockage à un faible niveau. ONTAP peut réduire les données sur les systèmes en ligne (systèmes AFF) ou post-traitement (tous les systèmes), avec un impact minimal sur les performances du système.
+
+Dans ONTAP 9.8, plusieurs améliorations sont disponibles pour l'efficacité du stockage.
+
+
+
+== FabricPool
+
+FabricPool est la technologie NetApp de Tiering des données qui transfère les blocs marqués comme inactifs dans un système de fichiers et les regroupe en objets de 4 Mo pour être envoyés vers le cloud ou les compartiments S3. L'idée est que les données inactives peuvent atteindre 80 % de la capacité totale d'un système de stockage. Il est donc préférable de les transférer vers une solution de stockage à moindre coût, plutôt que de les conserver sur le Tier de performance.
+
+Cela se produit automatiquement dans ONTAP via des règles de Tiering que vous pouvez définir et vous pouvez déterminer la quantité de données inactives dans votre système de stockage. Vous pouvez évaluer si FabricPool peut réellement vous faire économiser de l'argent.
+
+image:ontap98fo_image22.png["Erreur : image graphique manquante"]
+
+Lorsqu'un client accède à un fichier qui a été placé dans le Cloud, seuls les blocs demandés (et non le fichier entier) sont transférés vers le Tier de performance pour l'accès.
+
+Pour plus d'informations sur FabricPool, voir https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["Tr-4598 : meilleures pratiques de FabricPool"] et https://soundcloud.com/techontap_podcast/episode-268-netapp-fabricpool-and-s3-in-ontap-98["Tr-4598 : épisode 268 du podcast FabricPool Best Practices and Tech OnTap : FabricPool NetApp et S3 dans la ONTAP 9.8"^].
+
+ONTAP 9.8 prend en charge les fonctions FabricPool suivantes :
+
+* *Tiering à partir d'agrégats de disques durs.* avant ONTAP 9.8, le Tiering des données FabricPool vers le cloud à partir d'agrégats ONTAP n'était possible que sur des agrégats SSD. ONTAP 9.8 permet désormais de mettre en niveau les données en utilisant FabricPool à partir d'agrégats de disques durs.
+* *Tiering dans ONTAP S3.* comme ONTAP S3 est maintenant disponible de façon générale, il est possible de procéder au Tiering à partir d'un système ONTAP utilisant FabricPool vers un compartiment ONTAP S3. Vous pouvez donc reconvertir le stockage en l'utilisant comme niveau FabricPool. De plus, grâce au Tiering vers le même cluster, vous bénéficiez de temps de récupération plus rapides qu'à partir d'une connexion réseau cloud.
+* * Augmentation de la période de refroidissement.* avant ONTAP 9.8, les données seraient marquées comme étant froides après une période de refroidissement, avec un maximum de 63 jours. ONTAP 9.8 vous permet de configurer jusqu'à 183 jours. Cette fonction est utile pour les données auxquelles on peut accéder de façon sporadique, telles que les données auxquelles on accède chaque trimestre, comme les rapports financiers.
+* *Balisage d'objets.* lorsque vous procédez au Tiering vers un fournisseur S3 qui propose des règles de cycle de vie des informations qui gèrent les données basées sur des balises d'objet, ONTAP 9.8 peut marquer les objets à l'aide de FabricPool pour les intégrer à ces règles.
+* *Récupération du Cloud.* dans certains cas, vous devrez peut-être extraire toutes les données hiérarchisées du cloud. Vous pouvez désormais exécuter un travail qui récupère les données du cloud dans ONTAP 9.8 au lieu d'y accéder.
+
+
+
+
+== Compression
+
+ONTAP 9.8 a introduit certaines modifications de compression des données qui permettent d'améliorer les performances et d'améliorer les taux de réduction des données sur des jeux de données compressibles.
+
+Le principal changement apporté à la compression consistait à différencier les données en classifications inactives et fortement sollicitées. Les données inactives sont des données qui n'ont pas été utilisées depuis longtemps et les données actives sont des données fréquemment utilisées. Nous voulons réduire la compression des données fortement sollicitées et les compresser de manière plus agressive.
+
+Dans ONTAP 9.8, les données fortement sollicitées sont compressées à la volée à l'aide de groupes de compression de 8 Ko. En outre, la déduplication des données est effectuée avant la compression pour accroître encore l'efficacité des jeux de données.
+
+Les données inactives sont de nouveau compressées en arrière-plan en utilisant un groupe de compression de 32 K plus agressif. Ces changements assurent de meilleures performances pour les données fortement sollicitées et de meilleurs ratios de réduction des données pour toutes les données.
+
+link:ontap98fo_data_protection.html["Ensuite, la protection des données"]

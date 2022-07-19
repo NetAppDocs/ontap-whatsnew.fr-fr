@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: ontap991fo_other_major_additions.html 
+keywords: FlexGroup, S3, NFSv4.2, MAC, 
+summary: En plus des améliorations apportées à System Manager, aux améliorations apportées au SAN et à la protection des données, il existe quelques autres ajouts importants apportés à ONTAP 9.9.1. 
+---
+= Autres ajouts importants
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+En plus des améliorations apportées à System Manager, aux améliorations apportées au SAN et à la protection des données, il existe quelques autres ajouts importants apportés à ONTAP 9.9.1.
+
+
+
+== Mise en œuvre/comptabilité de l'espace logique : volumes FlexGroup
+
+Un compte rendu d'espace logique a été introduit pour les volumes FlexVol dans la ONTAP 9.4. Il permet aux administrateurs de stockage de masquer les économies réalisées sur l'efficacité du stockage afin que les utilisateurs finaux n'allouent pas de quotas de stockage attribués.
+
+Par exemple, si un utilisateur écrit 6 To dans un volume de 10 To et que l'efficacité du stockage permet d'économiser 2 To, la comptabilité de l'espace logique peut contrôler si l'utilisateur voit 6 To ou 4 To.
+
+image:ontap991fo_image17.png["Erreur : image graphique manquante"]
+
+ONTAP 9.5 a amélioré cette fonctionnalité et ajouté la prise en charge de l'application des quotas pour les volumes FlexVol, afin d'offrir davantage de contrôle aux administrateurs du stockage en empêchant les nouvelles écritures selon les seuils d'espace logique définis. Cependant, cette fonctionnalité était absente des volumes FlexGroup jusqu'à ONTAP 9.9.1.
+
+
+
+== Balises de métadonnées ONTAP S3 définies par l'utilisateur
+
+ONTAP 9.8 a introduit la prise en charge du protocole S3 pour les fonctionnalités de base du stockage objet.
+
+Prise en charge de S3 dans ONTAP 9.8 :
+
+* ACCÈS PUT/GET de base aux objets (n'inclut pas l'accès aux protocoles S3 et NAS à partir du même compartiment)
++
+** Pas de balisage d'objets ou de prise en charge du ILM ; pour l'utilisation du protocole S3 riche en fonctionnalités et dispersé dans le monde entier https://www.netapp.com/data-storage/storagegrid/["NetApp StorageGRID"^].
+
+
+* Chiffrement TLS 1.2
+* Téléchargements de pièces multiples
+* Ports réglables
+* Plusieurs compartiments par volume
+* Politiques d'accès aux compartiments
+* S3 en tant que cible NetApp FabricPool
+
+
+ONTAP 9.9.1 et versions ultérieures prennent en charge le marquage des métadonnées des objets lors de l'utilisation d'appels ObjectCreate et MultiPartUpload. Lorsque HEAD ou GET est exécuté sur un objet, les métadonnées définies par l'utilisateur et le nombre de balises sont renvoyées dans le cadre de l'en-tête HTTP de la réponse. Ces balises vous permettent de mieux catégoriser vos objets dans des compartiments ONTAP pour une gestion plus fiable des données et sont compatibles avec les applications qui exigent la possibilité de créer des métadonnées et des balises.
+
+Pour plus d'informations, consultez les ressources suivantes :
+
+* https://soundcloud.com/techontap_podcast/episode-268-netapp-fabricpool-and-s3-in-ontap-98["Podcast Tech OnTap : épisode 268 - NetApp FabricPool et S3 dans ONTAP 9.8"^]
+* https://www.netapp.com/us/media/tr-4814.pdf["ONTAP S3"^]
+
+
+
+
+== NFSv4.2 étiquettes de sécurité
+
+ONTAP 9.9.1 introduit la prise en charge de la fonction NFSv4.2 appelée NFS, qui est une façon de gérer l'accès granulaire aux fichiers et dossiers à l'aide d'étiquettes SELinux et du contrôle d'accès obligatoire (MAC). Ces étiquettes MAC sont stockées avec des fichiers et des dossiers et fonctionnent en conjonction avec les autorisations UNIX et les ACL NFSv4.x. La prise en charge de labellisé NFS signifie que ONTAP reconnaît et comprend désormais les paramètres de label SELinux du client NFS. Labellisé NFS est couvert dans la https://tools.ietf.org/html/rfc7204["RFC-7204"^].
+
+Exemples d'utilisation :
+
+* Étiquetage MAC des images de machines virtuelles
+* Classification de la sécurité des données pour le secteur public (secret, top secret, etc.)
+* Conformité en matière de sécurité
+* Linux sans disque
+
+
+Dans cette version, ONTAP prend en charge les modes de mise en application suivants :
+
+* https://tools.ietf.org/html/rfc7204["Mode serveur limité"^]. ONTAP ne peut pas appliquer les étiquettes, mais il peut les stocker et les transmettre.
++
+** La possibilité de modifier les étiquettes MAC est également à la charge du client.
+
+
+* https://tools.ietf.org/html/rfc7204["Mode invité"^]. Si le client n'est pas étiqueté NFS-Aware (v4.1 ou inférieur), les étiquettes MAC ne sont pas transmises.
+
+
+ONTAP ne prend pas en charge actuellement https://tools.ietf.org/html/rfc7204["Mode complet"^] (Stockage et application des étiquettes MAC).

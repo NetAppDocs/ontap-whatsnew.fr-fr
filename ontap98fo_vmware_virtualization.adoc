@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: ontap98fo_vmware_virtualization.html 
+keywords: FlexGroup, VMware, vSphere, NFS, 9.8, Virtual Storage Console, SnapCenter, Storage Replication Adapter, vVols 
+summary: 'Cette page décrit les nouvelles intégrations et la prise en charge de ONTAP 9.8 pour la virtualisation VMware, notamment le provisionnement d"un volume FlexGroup en tant que datastore NFS VMware, ce qui simplifie la gestion des datastores grâce à un datastore unique et évolutif qui offre la puissance d"un cluster ONTAP complet.' 
+---
+= Virtualisation VMware
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+L'intégration et la prise en charge de VMware dans ONTAP 9.8 sont très avancées grâce à un certain nombre de nouvelles fonctionnalités, notamment la prise en charge du datastore FlexGroup. ONTAP 9.8 permet de provisionner un volume FlexGroup en tant que datastore NFS VMware, ce qui simplifie la gestion des datastores grâce à un datastore unique et évolutif, offrant la puissance d'un cluster ONTAP complet. Nombre de ces nouvelles fonctionnalités sont disponibles avec les outils ONTAP pour VMware vSphere version 9.8.
+
+Cela signifie que les conditions suivantes s'appliquent :
+
+* Performances et placement validés
+* Qualification Interop
+* Allègement de la charge de copies VAAI amélioré, plus rapide et effectué en arrière-plan
+* Prise en charge de Virtual Storage Console, y compris le provisionnement FlexGroup, le redimensionnement et la suppression, la définition de la QoS sur les machines virtuelles individuelles et l'affichage des metrics de performances (latence, IOPS et débit) pour les machines virtuelles
+* Prise en charge de la sauvegarde et de la restauration des données primaires de stockage NetApp SnapCenter
+* Prise en charge d'un maximum de LUN VMFS de 64 To. Avec la prise en charge des volumes FlexVol de 128 To pour les LUN de 128 To/300 To avec la baie SAN NetApp, vous pouvez provisionner le datastore VMFS de 64 To maximum à l'aide de Virtual Storage Console dans les outils ONTAP pour la version 9.8 de VMware vSphere.
+* Améliorée https://www.vmware.com/in/products/site-recovery-manager.html["Site Recovery Manager (SRM)"^] évolutif. L'adaptateur de réplication du stockage des outils ONTAP pour VMware vSphere 9.8 augmente l'échelle des datastores et des groupes de protection pris en charge jusqu'à 512.
+* Metrics de fichier VMware vSphere vvols avec des API REST. La prise en charge de l'API REST pour les metrics de fichier vvols est ajoutée à ONTAP 9.8, qui permet à la console de stockage virtuelle d'afficher les metrics de performance de stockage ONTAP pour vvols dans le tableau de bord et les rapports.
+* https://docs.vmware.com/en/Site-Recovery-Manager/8.3/com.vmware.srm.admin.doc/GUID-5651B2B8-6410-48AE-8882-6D51C85AC201.html["Storage Replication adapter (SRA)"^] Prise en charge de SnapMirror synchrone
+* Prise en charge de https://tanzu.vmware.com/tanzu["VMware Tanzu"^] stockage
+* Meilleure prise en charge de vVvols, y compris une commande de rééquilibrage SAN vVol améliorée et des améliorations apportées aux profils de capacité de stockage. Pour plus d'informations sur la dernière prise en charge de la virtualisation VMware, consultez les ressources suivantes :
+* https://soundcloud.com/techontap_podcast/episode-263-virtualization-in-ontap-fall-2020-update["Podcast Tech OnTap épisode 263 : virtualisation dans le ONTAP – automne 2020"^]
+* https://www.netapp.com/us/media/tr-4597.pdf["Tr-4597 : VMware vSphere avec ONTAP"^]
+
