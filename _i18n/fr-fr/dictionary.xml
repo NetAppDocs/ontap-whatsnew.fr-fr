@@ -310,7 +310,6 @@
   <block id="8196dcbf9586cd0081ca8c94d6eec4ad" category="list-text">Prise en charge de<block ref="d0daefdc677909f35162a0118f978227" category="inline-link-rx"></block> stockage</block>
   <block id="ac66e55267029225d12d67c48e998acc" category="list-text">Meilleure prise en charge de vVvols, y compris une commande de rééquilibrage SAN vVol améliorée et des améliorations apportées aux profils de capacité de stockage. Pour plus d'informations sur la dernière prise en charge de la virtualisation VMware, consultez les ressources suivantes :</block>
   <block id="e4c4075a8c06d40ae4b59e37bb084cef" category="list-text"><block ref="e4c4075a8c06d40ae4b59e37bb084cef" category="inline-link-rx"></block></block>
-  <block id="ef5bb91ba96e022044cd2c0d3c47544b" category="list-text"><block ref="ef5bb91ba96e022044cd2c0d3c47544b" category="inline-link-rx"></block></block>
   <block id="f74d27ee3d0e9999cd6639962c93dfd1" category="summary">ONTAP 9.9.1 propose des améliorations importantes concernant le SAN. Cette section traite de ces fonctions et comprend des liens vers des documentations qui les décrivent plus en détail.</block>
   <block id="174d3f83f99e412b6e036c23d2fef40c" category="doc">Améliorations SAN</block>
   <block id="b55156d9bfdda8c2d88b737f7dccfcef" category="section-title">Toutes les améliorations apportées aux baies SAN</block>
@@ -601,4 +600,6 @@
   <block id="44e3f518913757f513f5d30d56b36053" category="paragraph">ONTAP ne prend pas en charge actuellement<block ref="5e9abc8e6304446e1ef9117174db5bc2" category="inline-link-rx"></block> (Stockage et application des étiquettes MAC).</block>
   <block id="7eb11865313a79b30293e6f823bc7459" category="sidebar">Présentation des fonctionnalités de NetApp ONTAP 9.9.1</block>
   <block id="bebab3b123211d2c00c685855ec9b053" category="sidebar">Présentation des fonctionnalités de NetApp ONTAP 9.8</block>
+  <block id="952fd691754e388c7b7ba473cf410aff" category="inline-link">Tr-4597 : VMware vSphere pour ONTAP</block>
+  <block id="541370c778951fff2e4cbe905d65b0ec" category="list-text"><block ref="541370c778951fff2e4cbe905d65b0ec" category="inline-link-rx"></block></block>
 </blocks>
