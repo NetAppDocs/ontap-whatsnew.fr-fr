@@ -33,6 +33,4 @@ Cette liste n'est pas exhaustive ; si nous avons inclus toutes les fonctionnalit
 
 Pour plus d'informations sur NetApp ONTAP, consultez le https://www.netapp.com/pdf.html?item=/media/7413-ds-3231.pdf["Fiche technique du logiciel de gestion de données ONTAP 9"^] et le https://docs.netapp.com/ontap-9/index.jsp["documentation produit"^].
 
-Découvrez-les maintenant link:https://tv.netapp.com/detail/video/6211778986001["vidéo"] De NetApp Insight 2020 pour une visite plus large des avancées remarquables de NetApp ONTAP.
-
 link:ontap98fo_simplicity_enhancements.html["Next : des améliorations en termes de simplicité"]
